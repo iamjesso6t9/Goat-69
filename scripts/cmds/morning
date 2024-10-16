@@ -1,0 +1,20 @@
+module.exports = {
+  config: {
+      name: "morning",
+      version: "1.0",
+      author: "Jester McGregor",
+      countDown: 5,
+      role: 0,
+      shortDescription: "goodmorning",
+      longDescription: "good morning message",
+      category: "reply",
+  },
+onStart: async function(){}, 
+onChat: async function({
+  event,
+  message,
+  getLang
+}) {
+  if (event.body && event.body.toLowerCase() == "good morning") return message.reply("Good morningg, now wash your face and go out of bed, friend...😝🔪");
+}
+};
